@@ -1,0 +1,19 @@
+#!/bin/bash
+
+. ./VERSION
+
+SOURCE=$(pwd)/src
+NODE_ENV=${1-"testing"}
+
+echo "Environment: ${NODE_ENV}"
+echo "Source: ${SOURCE}"
+
+[ $(docker ps -a | grep dda | wc -l) -gt 0 ] && docker ps -a | grep dda | awk '{print $1}' | xargs docker rm -f
+if [ "${NODE_ENV}" == "testing" ]; then
+  docker run -it --name="dda" -e NODE_ENV="${NODE_ENV}" -v ${SOURCE}:/home/code/dda -p 6633:6633 dda:${VERSION}
+else
+  docker run -it --entrypoint="/bin/bash" --name="dda" -e NODE_ENV="${NODE_ENV}" -v ${SOURCE}:/home/code/dda -p 6633:6633 dda:${VERSION}
+fi
+
+# docker run -it -p 6633:6633 --entrypoint "/bin/bash" dda:${VERSION}
+#docker run -it -p 6633:6633 -p 8080:8080 --entrypoint "/bin/bash" -v $ANSIBLE_HOME/playbooks/roles/communication/reminders/sgs-app/templates/config/config.json:/home/code/sms-gw/config.json:ro dda:1.0

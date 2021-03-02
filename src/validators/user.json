@@ -1,0 +1,10 @@
+ {
+   "firstName": "required|max:20|min:2",
+   "lastName": "required|max:20|min:2",
+   "type": "required",
+   "mobileNo": "required|string|max:20|min:2",
+   "emailId": "required|email",
+   "password": "required|string",
+   "image": "string",
+   "userId": "required|string"
+ }

@@ -1,0 +1,51 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "Web Service template",
+  "main": "node launch.js",
+  "scripts": {
+    "start": "node launch.js",
+    "test": "mocha test/*.js --timeout 60000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:nxtstack/projectname.git"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-eslint": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-nodemon": "*",
+    "gulp-plumber": "*",
+    "nodemon": "*"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "compression": "^1.7.3",
+    "debug": "^2.6.3",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.3.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.11.1",
+    "mysql2": "^1.6.1",
+    "nodemailer": "^4.0.0",
+    "nunjucks": "^3.0.1",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "sequelize": "^4.38.0",
+    "validatorjs": "^3.11.0"
+  },
+  "keywords": [
+    "webservice",
+    "nodejs",
+    "template"
+  ],
+  "author": "Ralstan Vaz",
+  "license": ""
+}

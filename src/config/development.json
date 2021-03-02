@@ -1,0 +1,91 @@
+{
+  "multiples": "1",
+  "db": {
+    "db": "mongo",
+    "redisPort": "6379",
+    "redisHost": "127.0.0.1",
+    "mongo": "mongodb://127.0.0.1/projectname",
+    "couchBase": {
+      "cluster": "127.0.0.1:8091",
+      "bucket": "bucketName"
+    },
+    "sql": {
+      "database": "nodejs",
+      "username": "root",
+      "password": "root",
+      "dialect": "mysql",
+      "host": "localhost"
+    }
+  },
+  "auth": {
+    "secretOrKey": "SECRET",
+    "expiresIn": 600
+  },
+  "email": {
+    "smtpURL": "smtp://postmaster%40nxtstack.com:gardenROSE12!%40@smtp.mailgun.org",
+    "fromName": "GDA",
+    "fromEmail": "hello@nxtstack.com",
+    "replyTo": "hello@nxtstack.com"
+  },
+  "sms": {
+    "url": "http://login.bulksmsservice.net.in/api/mt/SendSMS?",
+    "params": {
+      "apikey": "CIMIc5a5z02K9vhwbpzmrA",
+      "senderid": "GDAWEB",
+      "channel": "trans",
+      "DCS": 0,
+      "flashsms": 0,
+      "route": 14
+    }
+  },
+  "accessRoles": {
+    "admin": {
+      "get": {
+        "allowed": ["*"],
+        "notAllowed": [""]
+      },
+      "post": {
+        "allowed": ["*"],
+        "notAllowed": [""]
+      },
+      "put": {
+        "allowed": ["*"],
+        "notAllowed": [""]
+      },
+      "delete": {
+        "allowed": ["*"],
+        "notAllowed": [""]
+      }
+    },
+    "user": {
+      "get": {
+        "allowed": ["*"],
+        "notAllowed": ["/user/admin"]
+      },
+      "post": {
+        "allowed": [""],
+        "notAllowed": ["*"]
+      },
+      "put": {
+        "allowed": ["*"],
+        "notAllowed": ["/user/admin"]
+      },
+      "delete": {
+        "allowed": ["*"],
+        "notAllowed": ["/user/admin"]
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "error": "Not Found",
+      "description": "The resource you are looking for was not found"
+    }
+  },
+  "cdn": {
+    "url": "http://127.0.0.1:8080/cdn-api/users/login",
+    "accessUrl": "http://127.0.0.1:8080/cdn-api/content/access",
+    "userId": "finzy",
+    "password": "humariPyaari$%^"
+  }
+}

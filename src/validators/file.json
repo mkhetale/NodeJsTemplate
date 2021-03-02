@@ -1,0 +1,7 @@
+ {
+   "parentId": "required|string",
+   "type": "required|string",
+   "name": "required|string",
+   "path": "required|string",
+   "tags": "required|string"
+ }

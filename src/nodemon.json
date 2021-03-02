@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules", "bower_components", ".sass-cache"],
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "watch": ["*.*"],
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 6633
+  },
+  "ext": "js json",
+  "stdin": true,
+  "stdout": true
+}
